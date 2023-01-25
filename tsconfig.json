@@ -7,5 +7,5 @@
     "lib": ["esnext"],
     "esModuleInterop": true,
     "typeRoots": ["./src/types/"]
-  }
+  }, "include": ["src/**/*.ts"]
 }

@@ -12,11 +12,9 @@ const PORT = 1234
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'hello' })
-})
+app.use('/api',protect, userRoutes)
 
-app.use('/api', protect, [userRoutes])
+//app.use('/api', protect, [userRoutes])
 
 app.post('/signUp', createNewUser)
 app.post('/signIn', signIn)
